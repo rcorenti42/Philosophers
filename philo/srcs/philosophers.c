@@ -6,7 +6,7 @@
 /*   By: rcorenti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 04:11:56 by rcorenti          #+#    #+#             */
-/*   Updated: 2021/12/22 04:18:11 by rcorenti         ###   ########.fr       */
+/*   Updated: 2022/01/18 03:30:05 by rcorenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@ void	ft_exit(t_data *data, t_philo *philo, pthread_t *thread)
 {
 	int	i;
 
+	i = 0;
+	while (i < data->nbr)
+	{
+		if (pthread_join(thread[i], NULL))
+		{
+			printf("Error\nPthread_join error\n");
+			break ;
+		}
+		i++;
+	}
 	i = 0;
 	while (i < data->nbr)
 	{

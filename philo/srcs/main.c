@@ -6,7 +6,7 @@
 /*   By: rcorenti <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 04:57:31 by rcorenti          #+#    #+#             */
-/*   Updated: 2021/12/22 04:18:58 by rcorenti         ###   ########.fr       */
+/*   Updated: 2022/01/18 03:30:20 by rcorenti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,14 +58,6 @@ static void	ft_start(t_data *data)
 	if (start_philos(data, philo, thread))
 		return ;
 	check_dead(data, philo);
-	while (--data->nbr)
-	{
-		if (pthread_join(thread[data->nbr], NULL))
-		{
-			printf("Error\nPthread_join error\n");
-			break ;
-		}
-	}
 	ft_exit(data, philo, thread);
 }
 

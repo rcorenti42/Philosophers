@@ -6,7 +6,7 @@
 #    By: rcorenti <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/20 07:03:37 by rcorenti          #+#    #+#              #
-#    Updated: 2021/12/22 04:24:51 by rcorenti         ###   ########.fr        #
+#    Updated: 2022/01/18 03:04:22 by rcorenti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ NAME = philo
 CC = clang
 
 FLAGS = -Wall -Wextra -Werror
+ 
 
 THREAD_F = -lpthread
 
